@@ -1,11 +1,13 @@
 package com.cjc.dev.abstracts.setData;
 import java.util.Scanner;
-import com.cjc.dev.pojos.*;
-import com.cjc.dev.interfaces.*;
+
+import com.cjc.dev.pojos.Student;
+import com.cjc.dev.pojos.Teacher;
 public abstract class SetTeacherData extends SetStudentData {
 	Scanner sc = new Scanner(System.in);
-	public Teacher setTeacherData(Teacher t)
+	public Teacher setTeacherData(Student s)
 	{
+	Teacher t = new Teacher();
 	System.out.println("Enter Teacher ID");
 	t.setTid(sc.nextInt());
 
@@ -20,6 +22,8 @@ public abstract class SetTeacherData extends SetStudentData {
 
 	System.out.println("Enter Teacher Blood Group");
 	t.setTbgroup(sc.next().charAt(0));
+	
+	t.setStudent(s);
 
 
 

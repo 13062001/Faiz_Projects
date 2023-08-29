@@ -2,11 +2,13 @@ package com.cjc.dev.abstracts.setData;
 import java.util.Scanner;
 
 import com.cjc.dev.pojos.College;
+import com.cjc.dev.pojos.School;
 public abstract class SetCollegeData extends SetSchoolData {
 	Scanner sc = new Scanner(System.in);
 
-	public College setCollegeData(College c1)
+	public College setCollegeData(School sc1)
 	{
+		College c1 = new College();
 	System.out.println("Enter College Name");
 	c1.setCname(sc.next()+sc.nextLine());
 
@@ -18,7 +20,9 @@ public abstract class SetCollegeData extends SetSchoolData {
 
 	System.out.println("Enter College Mobile Number");
 	c1.setCno(sc.nextLong());
-
+	
+	c1.setSchool(sc1);
+	
 	return c1 ;
 
 

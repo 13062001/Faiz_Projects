@@ -31,4 +31,6 @@ public class GetAllData extends SetUniversityData {
 	return u;
 	}
 
+	
+
 }
